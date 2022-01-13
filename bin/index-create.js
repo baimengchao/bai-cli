@@ -17,7 +17,7 @@ const questions = [
 
 inquirer.prompt(questions).then((data)=>{
   console.log('__dirname', __dirname)
-  copy(path.resolve(__dirname, '../src/myproject'), path.resolve(__dirname, '../' + data.projectName), function (err) {
+  copy(path.resolve(__dirname, '../src/myproject'), data.projectName, function (err) {
     console.log(111)
   })
 })
